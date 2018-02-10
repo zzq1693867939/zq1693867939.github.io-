@@ -8,16 +8,23 @@
 
 <title>
   
-    Archive
+    Js原生全屏图片逐渐放大和缩小
   
 </title>
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="我的博客">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+<meta name="description" content="要求：&amp;emsp;1.放大一张占满全屏的图片，同时不能让浏览器出现滚动条&amp;emsp;2.要求兼容大多数分辨率 难点：&amp;emsp;放大过程中高度无法确定，浏览器的高度不能使用百分比。 操作步骤：首先放上html代码&amp;emsp;div里套img  提供图片  123&amp;lt;div&amp;gt;	&amp;lt;img src=&amp;quot;img/tupic.jpg&amp;quot;/&amp;gt;&amp;lt;/div&amp;gt; 然后">
+<meta name="keywords" content="赵志强技术总结">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Js原生全屏图片逐渐放大和缩小">
+<meta property="og:url" content="http://yoursite.com/2018/02/10/技术总结/index.html">
 <meta property="og:site_name" content="我的博客">
+<meta property="og:description" content="要求：&amp;emsp;1.放大一张占满全屏的图片，同时不能让浏览器出现滚动条&amp;emsp;2.要求兼容大多数分辨率 难点：&amp;emsp;放大过程中高度无法确定，浏览器的高度不能使用百分比。 操作步骤：首先放上html代码&amp;emsp;div里套img  提供图片  123&amp;lt;div&amp;gt;	&amp;lt;img src=&amp;quot;img/tupic.jpg&amp;quot;/&amp;gt;&amp;lt;/div&amp;gt; 然后">
+<meta property="og:image" content="https://thumbnail0.baidupcs.com/thumbnail/0ef9570e46b3ce122289cf536e6e7cc7?fid=2241883830-250528-283240901879173&time=1518224400&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-vR6ire0uAY4GW4vQ%2FHEaTBKg6FY%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=937268713483358273&dp-callid=0&size=c710_u400&quality=100&vuk=-&ft=video">
+<meta property="og:updated_time" content="2018-02-10T01:56:13.171Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="我的博客">
+<meta name="twitter:title" content="Js原生全屏图片逐渐放大和缩小">
+<meta name="twitter:description" content="要求：&amp;emsp;1.放大一张占满全屏的图片，同时不能让浏览器出现滚动条&amp;emsp;2.要求兼容大多数分辨率 难点：&amp;emsp;放大过程中高度无法确定，浏览器的高度不能使用百分比。 操作步骤：首先放上html代码&amp;emsp;div里套img  提供图片  123&amp;lt;div&amp;gt;	&amp;lt;img src=&amp;quot;img/tupic.jpg&amp;quot;/&amp;gt;&amp;lt;/div&amp;gt; 然后">
+<meta name="twitter:image" content="https://thumbnail0.baidupcs.com/thumbnail/0ef9570e46b3ce122289cf536e6e7cc7?fid=2241883830-250528-283240901879173&time=1518224400&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-vR6ire0uAY4GW4vQ%2FHEaTBKg6FY%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=937268713483358273&dp-callid=0&size=c710_u400&quality=100&vuk=-&ft=video">
 
 
   <link rel="alternative" href="/atom.xml" title="我的博客" type="application/atom+xml">
@@ -145,47 +152,30 @@
       
         <div style="max-width: 1000px">
       
-          
-
+          <article id="post-技术总结" class="article article-type-post">
+  
+    <h1 class="article-header">
+      Js原生全屏图片逐渐放大和缩小
+    </h1>
   
   
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <h1><a href="/archives/2018" class="archive-year">2018</a></h1>
-        </div>
-        <div class="post-list">
-    
-  
 
-    <div class="post-list-item article">
-      <h3 class="article-header">
-        <a href="/2018/02/10/技术总结/" >
-  Js原生全屏图片逐渐放大和缩小
-</a>
-
-      </h3>
-      
-
-      <div class="article-info">
-        <a href="/2018/02/10/技术总结/"><span class="article-date">
+  <div class="article-info">
+    <span class="article-date">
   2018-02-10
 </span>
-</a>
-        
 
-        
+    
+
+    
 	<span class="article-tag tagcloud">
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/赵志强技术总结/">赵志强技术总结</a></li></ul>
 	</span>
 
 
-      </div>
-      <div class="article-entry">
-        
-          <h3 id="要求："><a href="#要求：" class="headerlink" title="要求："></a>要求：</h3><p>&emsp;1.放大一张占满全屏的图片，同时不能让浏览器出现滚动条<br>&emsp;2.要求兼容大多数分辨率</p>
+  </div>
+  <div class="article-entry">
+    <h3 id="要求："><a href="#要求：" class="headerlink" title="要求："></a>要求：</h3><p>&emsp;1.放大一张占满全屏的图片，同时不能让浏览器出现滚动条<br>&emsp;2.要求兼容大多数分辨率</p>
 <h3 id="难点："><a href="#难点：" class="headerlink" title="难点："></a>难点：</h3><p>&emsp;放大过程中高度无法确定，浏览器的高度不能使用百分比。</p>
 <h3 id="操作步骤："><a href="#操作步骤：" class="headerlink" title="操作步骤："></a>操作步骤：</h3><h4 id="首先放上html代码"><a href="#首先放上html代码" class="headerlink" title="首先放上html代码"></a>首先放上html代码</h4><p>&emsp;div里套img</p>
 <blockquote>
@@ -197,84 +187,29 @@
 <h4 id="接着就是js部分了"><a href="#接着就是js部分了" class="headerlink" title="接着就是js部分了"></a>接着就是js部分了</h4><p>&emsp;首先我们要给div和img定高度，因为我们是一个全屏的案例，所以我们的高度其实也就是浏览器可视区域的高度，因此我们的高度就可以这样设置，先获取到可视区域的高，然后把获取到的值赋给div和img。<br>&emsp;这时我们就可以进行放心的放大缩小了，不用担心滚动条的问题。<br>&emsp;在这里我们使用移入移出事件来实现。<br>&emsp;图片的大小用改变宽高的百分比来实现，设置一个变量，加上一个定时器，当鼠标移入的时候，让变量逐渐加大即图片放大，移出时，变量缩小图片缩小。<br>注意：移入移出时一定要清除定时器，同时加入判断条件防止图片无限放大缩小。</p>
 <h4 id="最后放上js代码"><a href="#最后放上js代码" class="headerlink" title="最后放上js代码"></a>最后放上js代码</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">var div=document.querySelector(&apos;div&apos;);</span><br><span class="line">var imgs=document.querySelector(&apos;img&apos;);</span><br><span class="line">var wh=document.documentElement.clientHeight;</span><br><span class="line">div.style.height=wh+&quot;px&quot;;</span><br><span class="line">imgs.style.height=wh+&quot;px&quot;;</span><br><span class="line">var s=100;</span><br><span class="line">var timer;</span><br><span class="line">div.onmouseover=function()&#123;</span><br><span class="line">    clearInterval(timer);</span><br><span class="line">    timer=setInterval(function()&#123;</span><br><span class="line">        s++</span><br><span class="line">        if(s&gt;=200)&#123;</span><br><span class="line">        s=200;</span><br><span class="line">        &#125;</span><br><span class="line">        imgs.style.width=s+&quot;%&quot;;</span><br><span class="line">        imgs.style.height=s+&quot;%&quot;;</span><br><span class="line">    &#125;,16)</span><br><span class="line">&#125;</span><br><span class="line">div.onmouseout=function()&#123;</span><br><span class="line">    clearInterval(timer);</span><br><span class="line">    timer=setInterval(function()&#123;</span><br><span class="line">        s--</span><br><span class="line">        if(s&lt;=100)&#123;</span><br><span class="line">            s=100;</span><br><span class="line">        &#125;</span><br><span class="line">        imgs.style.width=s+&quot;%&quot;;</span><br><span class="line">        imgs.style.height=s+&quot;%&quot;;</span><br><span class="line">    &#125;,16)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-        
-      </div>
-    </div>
-
-  
-
-  
-  
+  </div>
+  <footer class="article-footer">
     
-  
-
-    <div class="post-list-item article">
-      <h3 class="article-header">
-        <a href="/2018/02/10/2017总结2018展望/" >
-  2017总结2018展望
-</a>
-
-      </h3>
+  <div class="cc">
+    <a href="http://creativecommons.org/licenses/by-sa/4.0/deed.en" target="_blank" title="Attribution-ShareAlike">
+      <img src="/images/cc/cc.png">
       
-
-      <div class="article-info">
-        <a href="/2018/02/10/2017总结2018展望/"><span class="article-date">
-  2018-02-10
-</span>
-</a>
+          <img src="/images/cc/by.png">
         
+          <img src="/images/cc/sa.png">
+      
+      <span>
+        This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.
+      </span>
+    </a>
+  </div>
 
-        
-	<span class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/赵志强/">赵志强</a></li></ul>
-	</span>
 
-
-      </div>
-      <div class="article-entry">
-        
-          <h3 id="2017年总结"><a href="#2017年总结" class="headerlink" title="2017年总结"></a>2017年总结</h3><h6 id="总体而言2017学年进步很大，相对于之前在学习态度上有很大的改变，好学，勤奋这些在以前是与自己完全不挂钩的。但是相对于其他同学，做的又是完全不够的。"><a href="#总体而言2017学年进步很大，相对于之前在学习态度上有很大的改变，好学，勤奋这些在以前是与自己完全不挂钩的。但是相对于其他同学，做的又是完全不够的。" class="headerlink" title="总体而言2017学年进步很大，相对于之前在学习态度上有很大的改变，好学，勤奋这些在以前是与自己完全不挂钩的。但是相对于其他同学，做的又是完全不够的。"></a>总体而言2017学年进步很大，相对于之前在学习态度上有很大的改变，好学，勤奋这些在以前是与自己完全不挂钩的。但是相对于其他同学，做的又是完全不够的。</h6><p>&emsp;&emsp;上个学期的学习中，理论知识的掌握没有实践操作突出，理论知识的掌握可以说是很差，实践操作也不是很好，独立思考的能力的表现的很好，和同学合作和探讨也很积极，这些是值得高兴的。<br>&emsp;&emsp;知识内容掌握方面，html和css部分掌握的已经比较熟练，js原生基础部分也还可以，js框架目前就会使用jQuery，ajax跨域调数据掌握的比较差，应该是练习的比较少，h5和css3熟练程度也不够，尤其是canvas部分。自适应布局掌握的相对可以，css3的运动部分不熟练.<br>&emsp;&emsp;视觉部分学的很差，英语不好也是一个大的问题，这是两个容易忽视的问题。<br><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1518236064282&amp;di=5578092b0443fade5795fa131586075b&amp;imgtype=0&amp;src=http%3A%2F%2Fp.yjbys.com%2Fimage%2F20161108%2F1478566566802757.jpg" alt=""></p>
-<h3 id="2018年展望"><a href="#2018年展望" class="headerlink" title="2018年展望"></a>2018年展望</h3><h6 id="在新的一年，应该有一个新的开始，一个适合自己的计划。"><a href="#在新的一年，应该有一个新的开始，一个适合自己的计划。" class="headerlink" title="在新的一年，应该有一个新的开始，一个适合自己的计划。"></a>在新的一年，应该有一个新的开始，一个适合自己的计划。</h6><p>&emsp;&emsp;对于以前的好的习惯将继续保持，不好的习惯将会努力改变。<br>&emsp;&emsp;首先就是html和js将继续保持，继续熟练，利用这半年时间在自学学会一种框架，多操作ajax调数据，习惯使用h5和css3，利用多余时间研究canvas。<br>&emsp;&emsp;然后加强理论知识的掌握，熟练面试题，多学学英语，至少把涉及到的英语全部掌握。<br>&emsp;&emsp;最后，在视觉方面多下点功夫，加强自己的审美，演讲口才方面也要多做努力。<br>&emsp;&emsp;做好以上这些的同时，也要把今年的学习内容掌握好，尽可能多的掌握课外知识。</p>
-
-        
-      </div>
-    </div>
-
-  
-
-  
-  
     
-  
 
-    <div class="post-list-item article">
-      <h3 class="article-header">
-        <a href="/2018/02/09/hello-world/" >
-  赵志强的博客
-</a>
+  </footer>
+</article>
 
-      </h3>
-      
-
-      <div class="article-info">
-        <a href="/2018/02/09/hello-world/"><span class="article-date">
-  2018-02-09
-</span>
-</a>
-        
-
-        
-
-      </div>
-      <div class="article-entry">
-        
-          <p>欢迎来到赵志强的博客</p>
-
-        
-      </div>
-    </div>
-
-  
 
 
 

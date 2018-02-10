@@ -78,7 +78,7 @@
           
             
               <li class="category-list-container">
-                <a href="javascript:;">Kategorie</a>
+                <a href="javascript:;">Category</a>
                 
               </li>
             
@@ -86,14 +86,14 @@
             
               <li class="tag-list-container">
                 <a href="javascript:;">Tag</a>
-                <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/赵志强/">赵志强</a><span class="tag-list-count">1</span></li></ul>
+                <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/赵志强/">赵志强</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/赵志强技术总结/">赵志强技术总结</a><span class="tag-list-count">1</span></li></ul>
               </li>
             
           
             
               <li class="archive-list-container">
                 <a href="javascript:;">Archive</a>
-                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/">2018</a><span class="archive-list-count">2</span></li></ul>
+                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/">2018</a><span class="archive-list-count">3</span></li></ul>
               </li>
             
           
@@ -157,6 +157,54 @@
           <h1><a href="/archives/2018" class="archive-year">2018</a></h1>
         </div>
         <div class="post-list">
+    
+  
+
+    <div class="post-list-item article">
+      <h3 class="article-header">
+        <a href="/2018/02/10/技术总结/" >
+  Js原生全屏图片逐渐放大和缩小
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2018/02/10/技术总结/"><span class="article-date">
+  2018-02-10
+</span>
+</a>
+        
+
+        
+	<span class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/赵志强技术总结/">赵志强技术总结</a></li></ul>
+	</span>
+
+
+      </div>
+      <div class="article-entry">
+        
+          <h3 id="要求："><a href="#要求：" class="headerlink" title="要求："></a>要求：</h3><p>&emsp;1.放大一张占满全屏的图片，同时不能让浏览器出现滚动条<br>&emsp;2.要求兼容大多数分辨率</p>
+<h3 id="难点："><a href="#难点：" class="headerlink" title="难点："></a>难点：</h3><p>&emsp;放大过程中高度无法确定，浏览器的高度不能使用百分比。</p>
+<h3 id="操作步骤："><a href="#操作步骤：" class="headerlink" title="操作步骤："></a>操作步骤：</h3><h4 id="首先放上html代码"><a href="#首先放上html代码" class="headerlink" title="首先放上html代码"></a>首先放上html代码</h4><p>&emsp;div里套img</p>
+<blockquote>
+<p>提供图片<br><img src="https://thumbnail0.baidupcs.com/thumbnail/0ef9570e46b3ce122289cf536e6e7cc7?fid=2241883830-250528-283240901879173&amp;time=1518224400&amp;rt=sh&amp;sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-vR6ire0uAY4GW4vQ%2FHEaTBKg6FY%3D&amp;expires=8h&amp;chkv=0&amp;chkbd=0&amp;chkpc=&amp;dp-logid=937268713483358273&amp;dp-callid=0&amp;size=c710_u400&amp;quality=100&amp;vuk=-&amp;ft=video" alt=""></p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">	&lt;img src=&quot;img/tupic.jpg&quot;/&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="然后写css样式"><a href="#然后写css样式" class="headerlink" title="然后写css样式"></a>然后写css样式</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">*&#123;</span><br><span class="line">    margin: 0;</span><br><span class="line">    padding: 0;</span><br><span class="line">&#125;</span><br><span class="line">div&#123;</span><br><span class="line">    width: 100%;</span><br><span class="line">    verflow: hidden;</span><br><span class="line">&#125;</span><br><span class="line">img&#123;</span><br><span class="line">    width: 100%;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>&emsp;div的宽度必须是100%，因为我们是全屏的，同时还要兼容所有分辨率，所以不能使用死值，img的大小和div是一样的。<br>&emsp;放大的过程中不能有滚动条，所以我们要给div设置超出部分隐藏。<br>&emsp;高度是不能使用百分比的，也不能使用死值，因此我们绝定高度由js来定。</p>
+<h4 id="接着就是js部分了"><a href="#接着就是js部分了" class="headerlink" title="接着就是js部分了"></a>接着就是js部分了</h4><p>&emsp;首先我们要给div和img定高度，因为我们是一个全屏的案例，所以我们的高度其实也就是浏览器可视区域的高度，因此我们的高度就可以这样设置，先获取到可视区域的高，然后把获取到的值赋给div和img。<br>&emsp;这时我们就可以进行放心的放大缩小了，不用担心滚动条的问题。<br>&emsp;在这里我们使用移入移出事件来实现。<br>&emsp;图片的大小用改变宽高的百分比来实现，设置一个变量，加上一个定时器，当鼠标移入的时候，让变量逐渐加大即图片放大，移出时，变量缩小图片缩小。<br>注意：移入移出时一定要清除定时器，同时加入判断条件防止图片无限放大缩小。</p>
+<h4 id="最后放上js代码"><a href="#最后放上js代码" class="headerlink" title="最后放上js代码"></a>最后放上js代码</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">var div=document.querySelector(&apos;div&apos;);</span><br><span class="line">var imgs=document.querySelector(&apos;img&apos;);</span><br><span class="line">var wh=document.documentElement.clientHeight;</span><br><span class="line">div.style.height=wh+&quot;px&quot;;</span><br><span class="line">imgs.style.height=wh+&quot;px&quot;;</span><br><span class="line">var s=100;</span><br><span class="line">var timer;</span><br><span class="line">div.onmouseover=function()&#123;</span><br><span class="line">    clearInterval(timer);</span><br><span class="line">    timer=setInterval(function()&#123;</span><br><span class="line">        s++</span><br><span class="line">        if(s&gt;=200)&#123;</span><br><span class="line">        s=200;</span><br><span class="line">        &#125;</span><br><span class="line">        imgs.style.width=s+&quot;%&quot;;</span><br><span class="line">        imgs.style.height=s+&quot;%&quot;;</span><br><span class="line">    &#125;,16)</span><br><span class="line">&#125;</span><br><span class="line">div.onmouseout=function()&#123;</span><br><span class="line">    clearInterval(timer);</span><br><span class="line">    timer=setInterval(function()&#123;</span><br><span class="line">        s--</span><br><span class="line">        if(s&lt;=100)&#123;</span><br><span class="line">            s=100;</span><br><span class="line">        &#125;</span><br><span class="line">        imgs.style.width=s+&quot;%&quot;;</span><br><span class="line">        imgs.style.height=s+&quot;%&quot;;</span><br><span class="line">    &#125;,16)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+        
+      </div>
+    </div>
+
+  
+
+  
+  
     
   
 
